@@ -7,7 +7,7 @@ Homebrew tap para las herramientas de auditoría de seguridad de [VampSecure Lab
 ## Instalación del tap
 
 ```bash
-brew tap vampsecure/labs
+brew tap vampsecure-labs/labs
 ```
 
 ## Herramientas disponibles
@@ -22,16 +22,16 @@ brew tap vampsecure/labs
 ## Ejemplos de uso
 
 ```bash
-brew install vampsecure/labs/vamp-cloud-enum
+brew install vampsecure-labs/labs/vamp-cloud-enum
 vamp-cloud-enum --domain empresa.com --cloud all
 
-brew install vampsecure/labs/vamp-cve-oracle
+brew install vampsecure-labs/labs/vamp-cve-oracle
 vamp-cve-oracle --cve CVE-2024-1234
 
-brew install vampsecure/labs/vamp-easm
+brew install vampsecure-labs/labs/vamp-easm
 vamp-easm --domain objetivo.com
 
-brew install vampsecure/labs/vamp-forticheck
+brew install vampsecure-labs/labs/vamp-forticheck
 vamp-forticheck --target 192.168.1.1
 ```
 
