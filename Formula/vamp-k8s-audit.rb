@@ -4,16 +4,16 @@ class VampK8sAudit < Formula
 
   desc "Kubernetes cluster security auditor for authorized assessments"
   homepage "https://github.com/Vampsecure-Labs/vamp-k8s-audit"
-  url "https://files.pythonhosted.org/packages/b5/89/c602691a361a38b6adc53c5d96d31026d80b398e052d6d3b0b4b3d9cb60d/vamp_k8s_audit-1.0.post1.tar.gz"
-  sha256 "33d7904b236fe3d87cd92740586683b5d5d04842707ddda70faaa0d4a3157a55"
+  url "https://files.pythonhosted.org/packages/3b/50/f6b89186fa89c8f2702b0f66690bc790ed86381ef889c71f3c636a2a0ea2/vamp_k8s_audit-1.1.tar.gz"
+  sha256 "ae302d6768ced93cca0d9ba33151712dc70a70b60a3a8e0af3cf437bf1099ebb"
   license "MIT"
-  version "1.0"
+  version "1.1"
 
   depends_on "python@3.12"
 
   def install
     venv = virtualenv_create(libexec, "python3")
-    venv.pip_install "vamp-k8s-audit==1.0.post1"
+    venv.pip_install "vamp-k8s-audit==1.1"
     bin.install_symlink libexec/"bin/vamp-k8s-audit"
   end
 
