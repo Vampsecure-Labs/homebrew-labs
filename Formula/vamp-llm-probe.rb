@@ -4,16 +4,16 @@ class VampLlmProbe < Formula
 
   desc "LLM API security auditor — prompt injection, jailbreak, ASCII smuggling"
   homepage "https://github.com/Vampsecure-Labs/vamp-llm-probe"
-  url "https://files.pythonhosted.org/packages/aa/f2/74bb86d3b6bcd7849029c28489021b5633878dbc05f4a834edc76f088fd0/vamp_llm_probe-1.5.0.tar.gz"
-  sha256 "670daeab26a3d69aacd6881435bfcc2f1666a47c1b3640c350d01283ae571cf8"
+  url "https://files.pythonhosted.org/packages/43/d1/77582a631b14c70691d8413eb4e84b6fc85ec466be877d49b2bfc4802328/vamp_llm_probe-1.6.0.tar.gz"
+  sha256 "534fffa2637a65e470a6ce5ab4bf92aac57809d4b1d1b9d3e9f4d2993032d7ae"
   license "MIT"
-  version "1.5.0"
+  version "1.6.0"
 
   depends_on "python@3.12"
 
   def install
     venv = virtualenv_create(libexec, "python3")
-    venv.pip_install "vamp-llm-probe==1.5.0"
+    venv.pip_install "vamp-llm-probe==1.6.0"
     bin.install_symlink libexec/"bin/vamp-llm-probe"
   end
 

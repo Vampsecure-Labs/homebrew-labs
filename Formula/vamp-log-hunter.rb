@@ -4,16 +4,16 @@ class VampLogHunter < Formula
 
   desc "Log hunting and threat-pattern scanner for authorized security assessments"
   homepage "https://github.com/Vampsecure-Labs/vamp-log-hunter"
-  url "https://files.pythonhosted.org/packages/60/c9/8eb845f2607ffad7f074842e9e041971b7d1d74d2f9c82fd37227e457f5c/vamp_log_hunter-1.1.tar.gz"
-  sha256 "322800d3e6b6ff06b61ef58a663df6c7b2f7073cd6fc751b8089a850595174ff"
+  url "https://files.pythonhosted.org/packages/c4/42/7759376872f1b4d35dc86c6d7a7021b1e052a604b11278387dda4fd91ddd/vamp_log_hunter-1.2.tar.gz"
+  sha256 "dc2b5c1474a476bee82d91f7de95bbda0949d1e1efc3458dbdefd8330043a81f"
   license "MIT"
-  version "1.1"
+  version "1.2"
 
   depends_on "python@3.12"
 
   def install
     venv = virtualenv_create(libexec, "python3")
-    venv.pip_install "vamp-log-hunter==1.1"
+    venv.pip_install "vamp-log-hunter==1.2"
     bin.install_symlink libexec/"bin/vamp-log-hunter"
   end
 
