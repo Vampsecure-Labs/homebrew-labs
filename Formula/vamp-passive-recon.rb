@@ -4,16 +4,16 @@ class VampPassiveRecon < Formula
 
   desc "Passive recon engine — subdomain enumeration, HTTP fingerprinting and GitHub dork scanning"
   homepage "https://github.com/Vampsecure-Labs/vamp-passive-recon"
-  url "https://files.pythonhosted.org/packages/94/a2/2dc86db26fe7863aa87fddc7f8951cf4c1dbce527500777ca1ab60a22777/vamp_passive_recon-1.2.0.tar.gz"
-  sha256 "bffabcb9c56e6f30d4465d77cfe51fa5b7b4404f43337743e1ef31605df3e8f7"
+  url "https://files.pythonhosted.org/packages/aa/a3/d48fba46846dc84a9fa4e1256de66a2c6f1a95358b406a3f6a78b47320bb/vamp_passive_recon-1.3.0.tar.gz"
+  sha256 "2951f45b7715ce0d418255f8419db1c6312470f9127940fb37f5844293b194c2"
   license "MIT"
-  version "1.2.0"
+  version "1.3.0"
 
   depends_on "python@3.12"
 
   def install
     venv = virtualenv_create(libexec, "python3")
-    venv.pip_install "vamp-passive-recon==1.2.0"
+    venv.pip_install "vamp-passive-recon==1.3.0"
     bin.install_symlink libexec/"bin/vamp-passive-recon"
   end
 
