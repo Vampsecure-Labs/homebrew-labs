@@ -4,16 +4,16 @@ class VampCloudEnum < Formula
 
   desc "Cloud asset enumeration and exposure analysis for authorized audits"
   homepage "https://github.com/Vampsecure-Labs/vamp-cloud-enum"
-  url "https://files.pythonhosted.org/packages/17/da/598cf5511fe4cfca8bedf74e4a816cb5860d0c5c43989e3b4c8623db5198/vamp_cloud_enum-1.2.tar.gz"
-  sha256 "70d625943d8a61176b546dbc3420dde258d395b01315e9bbc9233c5feb127e90"
+  url "https://files.pythonhosted.org/packages/4a/94/306d6b27784b8948710c3542c9c9f88938169495737cee1c420a7bc1c753/vamp_cloud_enum-1.3.tar.gz"
+  sha256 "599b8d5aad808f88d6687b91ccf6f2316091487bbd1ced01e146040cb59672b7"
   license "MIT"
-  version "1.2"
+  version "1.3"
 
   depends_on "python@3.12"
 
   def install
     venv = virtualenv_create(libexec, "python3")
-    venv.pip_install "vamp-cloud-enum==1.2"
+    venv.pip_install "vamp-cloud-enum==1.3"
     bin.install_symlink libexec/"bin/vamp-cloud-enum"
   end
 

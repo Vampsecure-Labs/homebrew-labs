@@ -4,16 +4,16 @@ class VampDarkwebIntel < Formula
 
   desc "Darkweb & threat intelligence CLI — cross-source IOC lookup with automatic correlation"
   homepage "https://github.com/Vampsecure-Labs/vamp-darkweb-intel"
-  url "https://files.pythonhosted.org/packages/3a/aa/77f8216385099bbfeb3a92985d0c960e24f07870d66b8e5a25c6bac693eb/vamp_darkweb_intel-1.0.0.tar.gz"
-  sha256 "ed9b3c8f9f4927028b5fc57259bc768d788e74c1f8b86bb178ce13628c027792"
+  url "https://files.pythonhosted.org/packages/a8/f8/c4325b7c1bbf19685eacdc21d1ed55ae503fb48bd2efc1673c354b72541f/vamp_darkweb_intel-1.1.0.tar.gz"
+  sha256 "28cf50aa785793d66b6433154e1c1581c9724a6cbbe4b6f73d905f118a2d1c87"
   license "MIT"
-  version "1.0.0"
+  version "1.1.0"
 
   depends_on "python@3.12"
 
   def install
     venv = virtualenv_create(libexec, "python3")
-    venv.pip_install "vamp-darkweb-intel==1.0.0"
+    venv.pip_install "vamp-darkweb-intel==1.1.0"
     bin.install_symlink libexec/"bin/vamp-darkweb-intel"
   end
 

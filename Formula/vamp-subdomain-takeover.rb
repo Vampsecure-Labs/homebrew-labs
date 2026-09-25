@@ -4,16 +4,16 @@ class VampSubdomainTakeover < Formula
 
   desc "Subdomain takeover vulnerability scanner for authorized assessments"
   homepage "https://github.com/Vampsecure-Labs/vamp-subdomain-takeover"
-  url "https://files.pythonhosted.org/packages/a1/39/5cdc2715103e4ffbb2585b4db18eb659d030488952f78d5ed18e0422665f/vamp_subdomain_takeover-1.2.tar.gz"
-  sha256 "d33f8c9f09b479ddde61e7584dc7ba823bf229fc62f2dc50e6e5b918e3bc1216"
+  url "https://files.pythonhosted.org/packages/d0/5f/23ea5ad2ee0fd2c2866777921295f957700418b6792d71c156eed7738a4c/vamp_subdomain_takeover-1.3.tar.gz"
+  sha256 "1809271bc4b556bd3fe93406f87e305b348a5348cb2b78ce1560316d95ff9326"
   license "MIT"
-  version "1.2"
+  version "1.3"
 
   depends_on "python@3.12"
 
   def install
     venv = virtualenv_create(libexec, "python3")
-    venv.pip_install "vamp-subdomain-takeover==1.2"
+    venv.pip_install "vamp-subdomain-takeover==1.3"
     bin.install_symlink libexec/"bin/vamp-subdomain-takeover"
   end
 
