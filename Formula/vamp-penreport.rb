@@ -4,16 +4,16 @@ class VampPenreport < Formula
 
   desc "Penetration test report generator for VampSecure Labs assessments"
   homepage "https://github.com/Vampsecure-Labs/vamp-penreport"
-  url "https://files.pythonhosted.org/packages/ac/6c/2b6944a38dea0888a62f78a0af92ad643587764b28a27ba98650cc0d26f0/vamp_penreport-2.4.tar.gz"
-  sha256 "33a25826020d0d6c093e785214b53e2c3fcd29a9071ae92972a81433c2684956"
+  url "https://files.pythonhosted.org/packages/b8/7f/bc2afcc71a03973d66957d774ade77a04c2214a61b8100b63ea4b3b4caa7/vamp_penreport-2.5.tar.gz"
+  sha256 "fda7f22d64840d196c8c488b1a337572ee9966464154249178560311e15d9147"
   license "MIT"
-  version "2.4"
+  version "2.5"
 
   depends_on "python@3.12"
 
   def install
     venv = virtualenv_create(libexec, "python3")
-    venv.pip_install "vamp-penreport==2.4"
+    venv.pip_install "vamp-penreport==2.5"
     bin.install_symlink libexec/"bin/vamp-penreport"
   end
 
