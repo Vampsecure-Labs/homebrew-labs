@@ -4,7 +4,7 @@ class VampAdRecon < Formula
 
   desc "Active Directory security auditor: Kerberoasting, AS-REP Roasting, delegation misconfigurations"
   homepage "https://github.com/Vampsecure-Labs/vamp-ad-recon"
-  url "https://files.pythonhosted.org/packages/source/v/vamp-ad-recon/vamp_ad_recon-1.0.tar.gz"
+  url "https://files.pythonhosted.org/packages/9b/02/09b18169d455f86dd98135abcf1791a563f212879332e5cfef3443ae6800/vamp_ad_recon-1.0.tar.gz"
   sha256 "4bf53676aea0fbedb839b337be55d301e189ff1ad87046d4bc4289e31be09f75"
   license "AGPL-3.0-only"
   version "1.0"

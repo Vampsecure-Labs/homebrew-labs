@@ -4,7 +4,7 @@ class VampSupplyChain < Formula
 
   desc "Supply chain security scanner: SBOM, CVE checks, typosquatting detection and checksum verification"
   homepage "https://github.com/Vampsecure-Labs/vamp-supply-chain"
-  url "https://files.pythonhosted.org/packages/source/v/vamp-supply-chain/vamp_supply_chain-1.0.tar.gz"
+  url "https://files.pythonhosted.org/packages/d5/76/f866d512c83f2a61585ec8f1bc541b82552718e050b8c72278ce319f6647/vamp_supply_chain-1.0.tar.gz"
   sha256 "d2ef9184d89e0b91d16f78a7b6e903a7877ff1da3e4ebb45bd2b6d6b088acd37"
   license "AGPL-3.0-only"
   version "1.0"
