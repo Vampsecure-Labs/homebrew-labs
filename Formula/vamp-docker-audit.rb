@@ -4,16 +4,16 @@ class VampDockerAudit < Formula
 
   desc "Docker/container security auditor for authorized assessments"
   homepage "https://github.com/Vampsecure-Labs/vamp-docker-audit"
-  url "https://files.pythonhosted.org/packages/source/v/vamp-docker-audit/vamp_docker_audit-1.4.tar.gz"
-  sha256 "d108822f4b9555e2efd7a4b407a7dcfd90810f090569c31225e3b9e3a670cd05"
+  url "https://files.pythonhosted.org/packages/source/v/vamp-docker-audit/vamp_docker_audit-1.5.0.tar.gz"
+  sha256 "8379309e244e99f33e4e0c5dd50d734f1ad8c782c7cd9f4f8c4867a943773703"
   license "AGPL-3.0-only"
-  version "1.4"
+  version "1.5.0"
 
   depends_on "python@3.12"
 
   def install
     venv = virtualenv_create(libexec, "python3")
-    venv.pip_install "vamp-docker-audit==1.4"
+    venv.pip_install "vamp-docker-audit==1.5.0"
     bin.install_symlink libexec/"bin/vamp-docker-audit"
   end
 

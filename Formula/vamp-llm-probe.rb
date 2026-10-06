@@ -5,7 +5,7 @@ class VampLlmProbe < Formula
   desc "LLM API security auditor — prompt injection, jailbreak, ASCII smuggling"
   homepage "https://github.com/Vampsecure-Labs/vamp-llm-probe"
   url "https://files.pythonhosted.org/packages/43/d1/77582a631b14c70691d8413eb4e84b6fc85ec466be877d49b2bfc4802328/vamp_llm_probe-1.6.0.tar.gz"
-  sha256 "534fffa2637a65e470a6ce5ab4bf92aac57809d4b1d1b9d3e9f4d2993032d7ae"
+  sha256 "30fbe3a5e8a348e4f28f758f4ea8146af5f19ecc74eee067069b4be250dabc86"
   license "MIT"
   version "1.6.0"
 
