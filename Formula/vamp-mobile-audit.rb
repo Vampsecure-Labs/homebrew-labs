@@ -4,8 +4,8 @@ class VampMobileAudit < Formula
 
   desc "OWASP MASVS 2.0 static auditor for APK and IPA files"
   homepage "https://github.com/Vampsecure-Labs/vamp-mobile-audit"
-  url "https://github.com/Vampsecure-Labs/vamp-mobile-audit/releases/download/v1.0.0/vamp_mobile_audit-1.0.0.tar.gz"
-  sha256 "6f562f25be7b384479525b649a9c6c873f6d00b70837ebcf05bc93ebdd0603ef"
+  url "https://files.pythonhosted.org/packages/source/v/vamp-mobile-audit/vamp_mobile_audit-1.0.0.tar.gz"
+  sha256 "7a631bed26c7b65bbaf8572aaf161d25fb6e94fed9cd4376d37b6ee209675b8a"
   license "AGPL-3.0-only"
   version "1.0.0"
 
@@ -13,7 +13,8 @@ class VampMobileAudit < Formula
 
   def install
     venv = virtualenv_create(libexec, "python3")
-    venv.pip_install_and_link buildpath
+    venv.pip_install "vamp-mobile-audit==1.0.0"
+    bin.install_symlink libexec/"bin/vamp-mobile-audit"
   end
 
   test do
