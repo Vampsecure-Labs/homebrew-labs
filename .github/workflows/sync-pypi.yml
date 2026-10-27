@@ -1,0 +1,32 @@
+# © VampSecure Studios — VampSecure Labs Security Research Division
+name: Sync formulae with PyPI
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # a diario, 06:17 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Sync formulae to latest PyPI release
+        run: python scripts/sync_formulae.py
+      - name: Commit and push if changed
+        run: |
+          if [ -n "$(git status --porcelain Formula)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add Formula
+            git commit -m "sync: bump formulae to latest PyPI release"
+            git push
+          else
+            echo "Sin cambios: todas las fórmulas PyPI ya están al día."
+          fi
