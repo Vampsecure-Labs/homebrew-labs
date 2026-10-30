@@ -4,16 +4,16 @@ class VampJwtAudit < Formula
 
   desc "JWT security auditor — alg=none, RS256-to-HS256 confusion, HMAC brute force"
   homepage "https://github.com/Vampsecure-Labs/vamp-jwt-audit"
-  url "https://files.pythonhosted.org/packages/source/v/vamp-jwt-audit/vamp_jwt_audit-1.4.0.tar.gz"
-  sha256 "c10031f7fe485b95e568b3b475f21b6b20d7bc1841459b9f82070d650625f265"
+  url "https://files.pythonhosted.org/packages/source/v/vamp-jwt-audit/vamp_jwt_audit-1.5.0.tar.gz"
+  sha256 "2d5d80f22f7e8b15b2ab3a8875d2ec92da234d21f365e5084f918acafe0d774f"
   license "AGPL-3.0-only"
-  version "1.4.0"
+  version "1.5.0"
 
   depends_on "python@3.12"
 
   def install
     venv = virtualenv_create(libexec, "python3")
-    venv.pip_install "vamp-jwt-audit==1.4.0"
+    venv.pip_install "vamp-jwt-audit==1.5.0"
     bin.install_symlink libexec/"bin/vamp-jwt-audit"
   end
 
