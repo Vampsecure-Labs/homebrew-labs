@@ -4,16 +4,16 @@ class VampSecretsScanner < Formula
 
   desc "Static secrets and credentials scanner with git history analysis and Shannon entropy detection"
   homepage "https://github.com/Vampsecure-Labs/vamp-secrets-scanner"
-  url "https://files.pythonhosted.org/packages/source/v/vamp-secrets-scanner/vamp_secrets_scanner-3.2.0.tar.gz"
-  sha256 "8a3c47d5f8ef41394b236d9e5235a3f1cfff6bdfe4c401def9c17117ae8a64be"
+  url "https://files.pythonhosted.org/packages/source/v/vamp-secrets-scanner/vamp_secrets_scanner-3.3.0.tar.gz"
+  sha256 "a19498ba58a9607613b3e573e64a6548249718314ed69a6aabcd5765a358a4f7"
   license "AGPL-3.0-only"
-  version "3.2.0"
+  version "3.3.0"
 
   depends_on "python@3.12"
 
   def install
     venv = virtualenv_create(libexec, "python3")
-    venv.pip_install "vamp-secrets-scanner==3.2.0"
+    venv.pip_install "vamp-secrets-scanner==3.3.0"
     bin.install_symlink libexec/"bin/vamp-secrets-scanner"
   end
 
